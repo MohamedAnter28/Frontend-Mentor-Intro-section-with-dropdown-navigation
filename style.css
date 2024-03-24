@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+#home {
+  height: 100vh;
+  background-color: var(--Almost-White);
+}
+
+#home .header {
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1350px;
+  margin: auto;
+  padding: 0.4rem 3rem;
+}
+
+#home .header .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+#home .header .nav-left .nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#home .header .nav-left .nav-links ul li a {
+  color: var(--Medium-Gray);
+  font-weight: 600;
+}
+
+#home .header .nav-left .nav-links ul img {
+  margin-left: 5px;
+}
+
+#home .header .nav-left .nav-links ul li:not(:nth-child(3)) a:hover {
+  color: var(--Almost-Black);
+}
+
+#home .header .nav-right a {
+  color: var(--Medium-Gray);
+  font-weight: 600;
+}
+
+.a-ri {
+  margin-right: 25px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 1px solid var(--Medium-Gray);
+  border-radius: 10px;
+  width: fit-content;
+  color: var(--Medium-Gray);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#home .header .nav-right a:hover {
+  color: var(--Almost-Black);
+}
+
+.btn:hover {
+  border-color: var(--Almost-Black);
+  color: var(--Almost-Black);
+}
+
+#home .header .mobile-menu-btn {
+  display: none;
+}
+
+.active {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.sub-menu a {
+  margin-top: 5px;
+}
+
+.one {
+  position: absolute;
+  top: 30px;
+  left: -100px;
+}
+
+.two {
+  position: absolute;
+  top: 30px;
+}
+
+.two a {
+  margin: 0 15px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 7%);
+  margin: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 1100px;
+  padding: 1rem 3rem;
+}
+
+.container img {
+  width: 90%;
+}
+
+.container .content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.container .content-text h1 {
+  color: var(--Almost-Black);
+  font-size: 4rem;
+}
+
+.container .content-text p {
+  width: 80%;
+  color: var(--Medium-Gray);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container .content-text .imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.container .content-text .imgs img {
+  max-width: 90px;
+}
+
+.mobile-sub img {
+  margin-right: 15px;
+}
+
+.active-btn {
+  display: none;
+}
+
+.mobile-sub {
+  display: none;
+}
+
+@media (min-width: 830px) {
+  .active-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    background-color: #fff;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+  }
+
+  .active-menu img {
+    margin-right: 15px;
+  }
+
+  .mob{
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 830px) {
+  #home .header .nav-right a {
+    display: none;
+  }
+
+  #home .header .nav-right .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .container img {
+    order: 1;
+    max-width: 350px;
+    margin: auto;
+    max-width: 350px;
+  }
+
+  .container .content-text {
+    order: 2;
+    text-align: center;
+  }
+
+  .container .content-text h1 {
+    font-size: 3rem;
+  }
+
+  .container .content-text p {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .container .content-text .btn {
+    width: 30%;
+    margin: 20px auto;
+  }
+
+  .imgs {
+    width: 100%;
+    padding-inline: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  
+  .active-menu {
+    display: block;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background-color: #fff;
+  }
+
+  .p-1,
+  .p-2:hover .mobile-sub {
+    display: block;
+  }
+
+  .des{
+    display: none;
+  }
+}
